@@ -33,9 +33,33 @@ const cart = [
     }
 ]
 
-//CODE HERE
+const cart = [
+    {
+        name: 'pizza', 
+        price: 9.99
+    }, 
+    {
+        name: 'pasta', 
+        price: 8.99
+    }, 
+    {
+        name: 'salad', 
+        price: 7.99
+    }
+]
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+let itemOne = cart[i=0];
+let itemOnePrice = itemOne.price;
+let itemTwo = cart[i=1];
+let itemTwoPrice = itemTwo.price;
+let itemThree = cart[i=2];
+let itemThreePrice = itemThree.price;
+
+let newCart = [itemOnePrice, itemTwoPrice, itemThreePrice]
+
+const summedPrice = newCart.reduce((acc, curr) => acc + curr)
+
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -53,7 +77,13 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+function calcFinalPrice(cartTotal, couponValue, tax){
+    let taxPrice = (cartTotal * tax) + cartTotal
+    let subtotal = taxPrice - (taxPrice * couponValue)
+    return subtotal
+  }
+  
+  console.log(calcFinalPrice(26.97, .1, .0685))
 
 
 
@@ -78,7 +108,12 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    const customerOne = {
+        name: 'string'
+        age: number
+        dietary restrictions: ['array', 'of', 'strings'] to describe what restrictions the customer has
+        item preferences: ['array', 'of', 'strings'] to list dishes/desserts/apps the customer has ordered multiple times
+    }
 
 */
 
@@ -87,4 +122,9 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+const customerOne = {
+    name: 'Jay Wright',
+    age: 31,
+    dietaryRestrictions: ['gluten free', 'peanut allergy'],
+    itemPreferences: ['gluten free hawaiian pizza', 'gluten free brownie', 'roasted vegetables']
+  }

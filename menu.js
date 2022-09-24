@@ -30,7 +30,16 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = {
+    name: 'margherita',
+    price: 11,
+    category: 'entree',
+    popularity: 5,
+    rating: 4.7,
+    tags: ['vegetarian', 'kids', 'gluten-free']
+  }
+  
+  console.log(pizza)
 
 
 
@@ -42,7 +51,9 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+let pizzaPopularity = pizza.popularity
+
+console.log(pizzaPopularity)
 
 
 /*
@@ -52,7 +63,9 @@
     get the value.
 */
 
-//CODE HERE
+let pizzaTagTwo = pizza.tags[i=1]
+
+console.log(pizzaTagTwo)
 
 
 /*
@@ -62,7 +75,9 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+var {price} = pizza
+
+console.log(price)
 
 
 /*
@@ -72,7 +87,9 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+var {category} = pizza
+
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,8 +104,48 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
-
+const foodArr = [
+    {
+      name: 'pasta puttanesca',
+      price: 13,
+      category: 'entree',
+      popularity: 7,
+      rating: 4.3,
+      tags: ['specials', 'gluten-free']
+    },
+    {
+      name: 'garlic bread',
+      price: 4,
+      category: 'appetizer',
+      popularity: 2,
+      rating: 4.8,
+      tags: ['most popular', 'kids', 'vegetarian']
+    },
+    {
+      name: 'spaghetti',
+      price: 8,
+      category: 'kids entree',
+      popularity: 16,
+      rating: 3.6,
+      tags: ['kids', 'gluten-free']
+    },
+    {
+      name: 'gelato',
+      price: 7,
+      category: 'dessert',
+      popularity: 3,
+      rating: 4.9,
+      tags: ['dessert', 'kids', 'vegetarian', 'most popular']
+    },
+    {
+      name: 'breadsticks',
+      price: 3,
+      category: 'appetizer',
+      popularity: 1,
+      rating: 5.0,
+      tags: ['kids', 'vegetarian', 'most popular']
+    }
+  ]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -103,9 +160,9 @@
     your food objects has.
 */
 
-//CODE HERE
+const filteredFood = foodArr.filter(element => element.tags.includes('kids'))
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+console.log(filteredFood)
 
 
 

@@ -21,7 +21,15 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
+const greetUser = (username) => {
+    let origString = "Welcome back, ${username}"
+    return origString
+  }
+  
+  
+  console.log(greetUser("Andrew"))
+
+
 
 
 
@@ -49,7 +57,17 @@
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
+const canWeDeliver = (zipCode) => {
+    if(deliveryAreaZipCodes.includes (zipCode)){
+      return "Delivery Available!"
+    } else {
+      return "Delivery Unavailable in your area."
+    }
+  }
+  
+  console.log(canWeDeliver(85204))
+  
+  console.log(canWeDeliver(84604))
 
 
 
@@ -70,8 +88,27 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+function canWeDeliverTwo(zipCode){
+    for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+      if(deliveryAreaZipCodes[i = 0] === zipCode){
+        return "Delivery Available!"
+      } else if(deliveryAreaZipCodes[i = 1] === zipCode){
+        return "Delivery Available!"
+      } else if(deliveryAreaZipCodes[i = 2] === zipCode){
+        return "Delivery Available!"
+      } else if(deliveryAreaZipCodes[i = 3] === zipCode){
+        return "Delivery Available!"
+      } else if(deliveryAreaZipCodes[i = 4] === zipCode){
+        return "Delivery Available!"
+      } else {
+        return "Delivery Unavailable in your area."
+      }
+    }
+  }
 
+  console.log(canWeDeliverTwo(85204))
+  
+  console.log(canWeDeliverTwo(84604))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -106,7 +143,11 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
+let dealOne = deals[i=0]
+
+let dealOneTitle = dealOne.title.replace("15", "10")
+
+console.log(dealOneTitle)
 
 
 
@@ -123,4 +164,10 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+let dealTwo = deals[i=1]
+
+let dealTwoDesc = dealTwo.desc.replace("March", "April")
+
+let newDealTwoDesc = dealTwoDesc.trim()
+
+console.log(newDealTwoDesc)
